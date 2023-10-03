@@ -18,7 +18,7 @@
   <body>
     <main class="w3-content center-container">
       <!-- Main container -->
-      <section class="w3-display-container w3-white w3-padding-large">
+      <section class="w3-display-container w3-white w3-padding-large hide">
         <header>
           <h1><span class="w3-text-blue">Stem</span><span>Wijzer</span></h1>
           <p>StemWijzer Tweede Kamer 2017</p>
@@ -44,7 +44,8 @@
             </div>
         </div>
             <div class="w3-container w3-cell margin-0">
-              <button
+              <button id="startProcess"
+
                 class="w3-button w3-blue w3-margin-left w3-large w3-padding-large"
               >
                 START
@@ -70,6 +71,44 @@
       </footer>
         </section>
       </section>
+      <!-- Voting process container -->
+      <section class="w3-display-container w3-white ">
+        <!-- Progress of questions -->
+        <div class="w3-border">
+          <div class="w3-grey" style="height:4px;width:0%"></div>
+        </div> 
+        <div class="w3-padding-large">
+        <!-- Return button -->
+        <div>
+          <i class="fas fa-arrow-alt-circle-left w3-xlarge w3-margin-top w3-text-grey"></i>
+        </div>
+        <!-- Question information -->
+        <div>
+          <h2 class="w3-text-blue"><span id="QuestionIndex">1.</span> Vraag</h2>
+          <p>Toelichting</p>
+        </div>
+        <!-- Buttons -->
+        <div>
+          <button class="w3-button w3-black w3-hover-blue" id="VoteAgree">
+            Eens
+          </button>
+          
+          <button class="w3-button w3-black w3-hover-blue" id="NoOpinion">
+            Geen van beide
+          </button>
+          
+          <button class="w3-button w3-black w3-hover-blue" id="voteDisagree">
+            Oneens
+          </button>
+          <a class="w3-margin-left w3-text-gray"  href="#">
+            Sla deze vraag over ->
+          </a>
+        </div>
+
+        <!-- Extra information regarding the views of the politicans. -->
+      </div>
+      </section>
     </main>
+    <script src="./Scripts/script.js"></script>
   </body>
 </html>
