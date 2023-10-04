@@ -4,6 +4,9 @@ body{
     background-size: cover;
 }
 
+.hide{
+    display: none;
+}
 .margin-0{
     margin: 0 !important;
 }
@@ -30,4 +33,9 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+
+#btnContainer{
+    display: inline-block;
 }
