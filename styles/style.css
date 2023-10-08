@@ -4,6 +4,9 @@ body{
     background-size: cover;
 }
 
+.hide{
+    display: none;
+}
 .margin-0{
     margin: 0 !important;
 }
@@ -33,6 +36,12 @@ body{
 }
 
 
+#btnContainer{
+    display: inline-block;
+}
+
+
 .hide{
     display: none;
 }
+
