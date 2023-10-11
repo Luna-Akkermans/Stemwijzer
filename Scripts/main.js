@@ -6,7 +6,7 @@ startProcess.addEventListener("click", () => {
     initalizeQuestion(questionCounter);
 })
 
-
+//Create objects to store answers in. 
 let createAnswerObject = (Answer) => {
     let TempAnswerObj = {
         id: questionCounter,
@@ -22,31 +22,46 @@ let createAnswerObject = (Answer) => {
     return TempAnswerObj;
 }
 
-
+//Handles the process of button presses
 let VotingProcessFunctionality = (Answer) => {
     //Check if the answer has a position, and has been answered before.
-    if (answers.some(i => i.id === questionCounter)) {
-        answers.splice(i.id, 1, createAnswerObject(Answer))
-        questionCounter++;
-        initalizeQuestion(questionCounter);
-    }else {
-        answers.push(createAnswerObject(Answer));
-        questionCounter++;
-        initalizeQuestion(questionCounter);
-    
+    if(answers.length+1 !== subjects.length){
+        if (answers.some(i => i.id === questionCounter)) {
+            answers.splice(questionCounter, 1, createAnswerObject(Answer))
+            SelectedButton(previousSelectedButton)
+            questionCounter++;
+            initalizeQuestion(questionCounter);
+        }else {
+            answers.push(createAnswerObject(Answer));
+            questionCounter++;
+            initalizeQuestion(questionCounter);
+        }
+    }else{
+        //Functionality for last / result
+      
+    }
+
+}
+
+let SelectedButton = (boolean) => {
+    if (previousSelectedButton) {
+        previousSelectedButton.classList.add('w3-black')
+        previousSelectedButton.classList.remove('w3-blue'); 
     }
 }
 
+//Backwards functionality
 btnMinusIndex.addEventListener("click", () => {
+    SelectedButton(previousSelectedButton)
     questionCounter--;
     initalizeQuestion(questionCounter) 
+    let allButtons = document.querySelectorAll(`[user-input]`);
+    Array.from(allButtons).forEach((ele, index) => {
+        if(ele.getAttribute("user-input") == answers[questionCounter].position){
+            ele.classList.add('w3-blue')
+            ele.classList.remove('w3-black')
+            previousSelectedButton = ele;
+        }
+    });
 });
 
-
-// next logic to write.
-
-// if a user goes backwards,
-
-// show the previous choice of them by making the button blue.
-// But also make sure if the user did not answer a certain question yet, that this does not happen.
-// Same when you go forward.

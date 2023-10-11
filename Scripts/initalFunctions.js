@@ -1,4 +1,3 @@
-
 //Show questions, I = index of data.js.
 let initalizeQuestion = (i) => {
     QuestionTitle.innerText = subjects[i].title;
@@ -7,13 +6,13 @@ let initalizeQuestion = (i) => {
 };
 
 
+
 //Create voting buttons
 let CreateButton = () => {
     //Check information to add to the buttons by going through constants.js, buttonInformaiton
     buttonInformation.forEach((element, index) => {
         let btn = document.createElement('button');
         btn.innerText = buttonInformation[index].text;
-
         //adding Attribute so I can target the buttons later.
         btn.setAttribute('user-input', buttonInformation[index].attr);
         btn.classList.add(...buttonClass);
@@ -24,5 +23,3 @@ let CreateButton = () => {
         btnContainer.appendChild(btn);
     })
 }
-
-
