@@ -45,3 +45,12 @@ body{
     display: none;
 }
 
+#checkBoxContainerWrapper{
+    display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.padding-bottom-m{
+    padding-bottom: 10px;
+}

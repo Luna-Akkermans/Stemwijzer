@@ -3,12 +3,14 @@ const StartScreen = document.getElementById("StartScreen");
 const VotingProcess = document.getElementById("VotingProcess");
 const btnContainer = document.getElementById("btnContainer");
 const btnMinusIndex = document.getElementById("ReturnButton");
-
-
-
+const btnPlusIndex = document.getElementById("btnPlusIndex");
+const partiesResult = document.getElementById("resultContainer");
+const checkboxContainerWrapper = document.getElementById("checkboxContainerWrapper");
 const QuestionTitle = document.getElementById("QuestionTitle");
 const QuestionDescription = document.getElementById("QuestionDescription");
 const QuestionIndex = document.getElementById("QuestionIndex");
+const questionInformationDiv = document.getElementById("questionInformationDiv");
+
 
 const buttonClass = ["w3-button", "w3-black", "w3-hover-blue"];
 

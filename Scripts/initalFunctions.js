@@ -8,18 +8,51 @@ let initalizeQuestion = (i) => {
 
 
 //Create voting buttons
-let CreateButton = () => {
-    //Check information to add to the buttons by going through constants.js, buttonInformaiton
+const CreateButtons = () => {
     buttonInformation.forEach((element, index) => {
-        let btn = document.createElement('button');
-        btn.innerText = buttonInformation[index].text;
-        //adding Attribute so I can target the buttons later.
-        btn.setAttribute('user-input', buttonInformation[index].attr);
-        btn.classList.add(...buttonClass);
-        btn.addEventListener('click', (e) => {
-            userInput = e.target.getAttribute("user-input");
-            VotingProcessFunctionality(userInput);
-        })
-        btnContainer.appendChild(btn);
-    })
-}
+      const { text, attr } = buttonInformation[index]; 
+      const btn = document.createElement('button');
+      btn.innerText = text;
+      btn.setAttribute('user-input', attr);
+      btn.classList.add(...buttonClass);
+      btn.addEventListener('click', handleButtonClick);
+      btnContainer.appendChild(btn);
+    });
+  };
+
+//Handle button presses
+const handleButtonClick = (e) => {
+    const userInput = e.target.getAttribute('user-input');
+    VotingProcessFunctionality(userInput);
+  };
+
+
+// Create end options
+const CreateCheckboxes = () => {
+    subjects.forEach((subject, index) => {
+        //Create a div around each checkbox
+        const checkboxDiv = document.createElement('p');
+        checkboxDiv.style.display = 'inline-block'
+        checkboxDiv.classList.add('w3-check-item','w3-margin' , 'w3-border-bottom', 'padding-bottom-m')
+
+        //Create checkboxes
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.id = index;
+        checkbox.name = 'importance'
+        checkbox.classList.add('w3-check', 'w3-margin-right');
+  
+
+        //Create labels
+        const label = document.createElement('label');
+        label.htmlFor = index;
+        label.textContent = subject.title;
+
+        // Append the checkbox and label to the checkboxDiv
+        checkboxDiv.appendChild(checkbox);
+        checkboxDiv.appendChild(label);
+
+        // Append the checkboxDiv to container
+        checkboxContainerWrapper.appendChild(checkboxDiv);
+    });
+};

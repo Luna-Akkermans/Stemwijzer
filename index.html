@@ -82,7 +82,7 @@
        <a id="ReturnButton" href="#">   <i class="fas fa-arrow-alt-circle-left w3-xlarge w3-margin-top w3-text-grey"></i></a>
         </div>
         <!-- Question information -->
-        <div>
+        <div id="questionInformationDiv">
           <span id="QuestionIndex">1.</span>
           <h2 class="w3-text-blue"> <span id="QuestionTitle"></span></h2>
           <p id="QuestionDescription">Toelichting</p>
@@ -91,11 +91,28 @@
         <div>
           <div id="btnContainer">
           </div>
-          <a class="w3-margin-left w3-text-gray"  href="#">
+          <a class="w3-margin-left w3-text-gray"  id="btnPlusIndex" user-input="skip" href="#">
             Sla deze vraag over ->
           </a>
         </div>
+      </section>
+      <section class="w3-display-container w3-white hide" id="resultContainer">
+        <div class="d-flex space-between w3-padding-large">
+          <div>
+            <h2 class="w3-text-blue">Zijn er vragen die meerwaarde hebben?</h2>
+            <span>Aangetikte stellingen hechten meerwaarde bij de berekening van je resultaat</span>
+          </div>
+          <div>
+            <button id="resultShow" class="w3-button w3-blue w3-margin-left w3-large w3-padding-large">
+              Resultaat
+            </button>
+          </div>
+        </div>
 
+        <div id="checkboxContainerWrapper" class="w3-light-gray w3-padding-16 w3-margin-top">
+          
+        </div>
+      </section>
         <!-- Extra information regarding the views of the politicans. -->
       </div>
     </main>
