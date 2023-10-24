@@ -10,6 +10,13 @@ const QuestionTitle = document.getElementById("QuestionTitle");
 const QuestionDescription = document.getElementById("QuestionDescription");
 const QuestionIndex = document.getElementById("QuestionIndex");
 const questionInformationDiv = document.getElementById("questionInformationDiv");
+const resultTitle = document.getElementById("resultHeader");
+const informationResult = document.getElementById("resultSpan");
+const ResultBTNContainer = document.getElementById("btnResultContainer");
+
+
+
+
 
 
 const buttonClass = ["w3-button", "w3-black", "w3-hover-blue"];
