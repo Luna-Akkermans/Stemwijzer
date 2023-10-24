@@ -4,6 +4,10 @@ const initalizeQuestion = (i) => {
   QuestionDescription.innerText = subjects[i].statement;
   QuestionIndex.innerText = `${i + 1} / ${subjects.length}`;
 
+  const percentage = (questionCounter / subjects.length) * 100;
+  console.log(percentage, questionCounter +1)
+  progressBar.style.width = percentage + "%";
+
 };
 
 

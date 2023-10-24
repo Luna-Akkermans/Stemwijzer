@@ -207,7 +207,7 @@ var subjects =
         { name: "Piratenpartij", position: "contra", explanation: "De Piratenpartij is van mening dat het belastingklimaat gunstiger moet worden voor kleine ondernemers en ZZP'ers. Echter, een algehele verlaging van de vennootschapsbelasting zou ook de multinationals steunen terwijl veel kleine ondernemers er niks van merken omdat ze toch al geen vennootschapsbelasting betalen. Hiervoor zijn betere maatregelen te bedenken zoals bijvoorbeeld een hogere ondernemersaftrek." },
         { name: "Artikel 1", position: "contra", explanation: "Bedrijven betalen nu al relatief weinig belasting in vergelijking met burgers." }
       ]
-    }
+    },
   ];
 
 var parties = [

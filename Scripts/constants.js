@@ -13,7 +13,7 @@ const questionInformationDiv = document.getElementById("questionInformationDiv")
 const resultTitle = document.getElementById("resultHeader");
 const informationResult = document.getElementById("resultSpan");
 const ResultBTNContainer = document.getElementById("btnResultContainer");
-
+const progressBar = document.getElementById("progressBar");
 
 
 

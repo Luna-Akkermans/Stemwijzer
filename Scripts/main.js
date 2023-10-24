@@ -21,7 +21,7 @@ const createAnswerObject = (Answer) => {
 
 // Function to handle button presses during the voting process
 let VotingProcessFunctionality = (Answer) => {
-    if (answers.length + 1 !== subjects.length) {
+    if (answers.length + 1 !== subjects.length) {        
         if (answers.some(i => i.id === questionCounter)) {
             answers.splice(questionCounter, 1, createAnswerObject(Answer));
             SelectedButton(previousSelectedButton);
@@ -33,6 +33,7 @@ let VotingProcessFunctionality = (Answer) => {
             initalizeQuestion(questionCounter);
         }
     } else {
+        progressBar.style.width = 100 + "%";
         showCheckboxes(); // Call a function that handles the vote calculation
     }
 }
@@ -144,14 +145,13 @@ resultShow.addEventListener('click', () => {
     // Set the type to "checkbox"
     checkbox.type = "checkbox";
     checkbox.id = 'partySize'
+    checkbox.classList.add('w3-check');
     informationResult.appendChild(checkbox)
 
     //Print result
     ImportanceChanger(answers, checkboxArray);
     let partyCounts = countPartyOccurrences(answers);
     partyCounts.sort((a, b) => b.match - a.match);
-
-
 
     createPartyList(partyCounts);
 
