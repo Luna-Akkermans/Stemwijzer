@@ -20,7 +20,7 @@ const createAnswerObject = (Answer) => {
 };
 
 // Function to handle button presses during the voting process
-let VotingProcessFunctionality = (Answer) => {
+const VotingProcessFunctionality = (Answer) => {
     if (answers.length + 1 !== subjects.length) {        
         if (answers.some(i => i.id === questionCounter)) {
             answers.splice(questionCounter, 1, createAnswerObject(Answer));
@@ -39,7 +39,7 @@ let VotingProcessFunctionality = (Answer) => {
 }
 
 // Function to handle the selected button style
-let SelectedButton = (boolean) => {
+const SelectedButton = (boolean) => {
     if (previousSelectedButton) {
         previousSelectedButton.classList.add('w3-black');
         previousSelectedButton.classList.remove('w3-blue');
@@ -88,7 +88,7 @@ const ImportanceChanger = (answers, checkboxArray) => {
 }
 
 // Show checkboxes for party selection and hide other elements
-let showCheckboxes = () => {
+const showCheckboxes = () => {
     partiesResult.classList.remove('hide');
     btnContainer.style.display = "none"; // Hide button container
     questionInformationDiv.style.display = "none"; // Hide question information
